@@ -1,0 +1,19 @@
+{
+  "name": "easybank",
+  "version": "1.0.0",
+  "description": "Landing page created with Sass using BEML-naming standards",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass styles/main.sass:styles/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmirville/easybank-landing-page.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Raynald Mirville",
+  "license": "ISC"
+}

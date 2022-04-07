@@ -1,0 +1,6 @@
+.notes/*
+.ref/*
+*.sketch
+*.xd
+*.fig
+.DS_Store
