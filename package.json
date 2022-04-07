@@ -12,7 +12,8 @@
     "url": "git+https://github.com/rmirville/easybank-landing-page.git"
   },
   "keywords": [
-    "sass"
+    "sass",
+    "beml"
   ],
   "author": "Raynald Mirville",
   "license": "ISC"
