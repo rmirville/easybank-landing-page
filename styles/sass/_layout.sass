@@ -15,6 +15,7 @@
 
 
 .footer
+  background-color: $color-ctx-dark-bg
   text-align: center
 
 .footer__icons, .footer__links 
@@ -23,8 +24,16 @@
 .footer__icon-ctx, .footer__link-ctx
   list-style: none
 
-.footer__icon, .footer__link
-  text-decoration: none
-
 .footer__link
   line-height: 34px
+  text-decoration: none
+  color: $color-ctx-dark-link
+
+.footer__link:hover .footer__icon
+  fill: $color-active
+
+.footer__icon
+  fill: $color-ctx-dark-link
+
+.footer__copy
+  margin-bottom: 0

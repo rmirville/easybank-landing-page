@@ -4,10 +4,21 @@ html {
   font-size: 15px;
   line-height: 25px;
   letter-spacing: -0.25px;
+  color: #9698a6;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  color: black;
+}
+
+a:hover {
+  color: #31d35c;
 }
 
 .section {
@@ -26,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
+  background-color: #2d314d;
   text-align: center;
 }
 
@@ -37,12 +49,22 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
 }
 
-.footer__icon, .footer__link {
-  text-decoration: none;
-}
-
 .footer__link {
   line-height: 34px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__link:hover .footer__icon {
+  fill: #31d35c;
+}
+
+.footer__icon {
+  fill: white;
+}
+
+.footer__copy {
+  margin-bottom: 0;
 }
 
 .button {
