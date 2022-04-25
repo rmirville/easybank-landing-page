@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;1,700&display=swap");
+html {
+  font-family: "Public Sans", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+.section {
+  text-align: center;
+}
+
+.section__heading {
+  font-size: 31px;
+  line-height: 37px;
+  letter-spacing: 0;
+}
+
+.column__heading {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer__icons, .footer__links {
+  padding-left: 0;
+}
+
+.footer__icon-ctx, .footer__link-ctx {
+  list-style: none;
+}
+
+.footer__icon, .footer__link {
+  text-decoration: none;
+}
+
+.footer__link {
+  line-height: 34px;
+}
+
+.button {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  text-decoration: none;
+}
+
+.card {
+  text-align: left;
+}
+
+.card__heading {
+  font-size: 16px;
+}
+
+.card__subtitle {
+  font-size: 10px;
+  letter-spacing: -0.15px;
+}
+
+.card__text {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero__heading {
+  font-size: 39px;
+  line-height: 47px;
+}
+
+/*# sourceMappingURL=styles.css.map */
