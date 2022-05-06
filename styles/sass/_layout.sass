@@ -8,24 +8,35 @@
 
 
 
-.menu
-  padding-left: 0
+.header
+  display: flex
+  justify-content: space-between
 
-.menu-link-ctx
-  list-style: none
-
-.menu-link
-  text-decoration: none
-
-
+.header__nav-open, .header__nav-close
+  cursor: pointer
 
 .header__links
+  display: none
   text-align: center
 
 .header__link
   font-size: 18px
   line-height: 45px
   color: $color-light-heading
+
+.header__nav-close
+  display: none
+
+.header__nav-open:focus
+  display: none
+
+.header__nav-open:focus~.header__nav-close
+  display: inline-block
+  float: right
+
+.header__nav-open:focus~.header__links, .header__nav-open:focus~.header__overlay
+  display: block
+
 
 
 .header__cta-ctx
