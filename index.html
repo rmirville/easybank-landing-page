@@ -6,47 +6,81 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+
+  <script async type="text/javascript" src="./scripts/index.js"></script>
   
   <title>Easybank | Next generation digital banking</title>
 </head>
 <body>
 
 <header class="header">
-  <a class="header__logo-ctx" href="#">
-    <img class="header__logo" src="./img/logo.svg" alt="logo" />
-  </a>
-  <nav class="header__nav">
-    <a class="header__nav-open" href="#">
-      <img class="header__nav-icon" src="./img/icon-hamburger.svg" />
-    </a>
-    <a class="header__nav-close" href="#">
-      <img class="header__nav-icon" src="./img/icon-close.svg" />
-    </a>
-    <div class="header__overlay"></div>
-    <ul class="header__links menu">
-      <li class="header__link-ctx menu-link-ctx">
-        <a class="header__link menu-link" href="#">Home</a>
-      </li>
-      <li class="header__link-ctx menu-link-ctx">
-        <a class="header__link menu-link" href="#">About</a>
-      </li>
-      <li class="header__link-ctx menu-link-ctx">
-        <a class="header__link menu-link" href="#">Contact</a>
-      </li>
-      <li class="header__link-ctx menu-link-ctx">
-        <a class="header__link menu-link" href="#">Blog</a>
-      </li>
-      <li class="header__link-ctx menu-link-ctx">
-        <a class="header__link menu-link" href="#">Careers</a>
-      </li>
-    </ul>
+  <nav class="header__narrow header-narrow">
+    <div class="header-narrow__bar">
+      <a class="header__logo-ctx" href="#">
+        <img class="header__logo" src="./img/logo.svg" alt="logo" />
+      </a>
+      <div class="header__nav-toggle jsHeader__navToggle">
+        <a class="header__nav-open header__nav-icon-ctx header__nav-icon-ctx--active jsHeader__navOpen" href="#">
+          <img class="header__nav-icon" src="./img/icon-hamburger.svg" />
+        </a>
+        <a class="header__nav-close header__nav-icon-ctx header__nav-icon-ctx--inactive jsHeader__navClose" href="#">
+          <img class="header__nav-icon" src="./img/icon-close.svg" />
+        </a>
+      </div>
+    </div>
+    <div class="header-narrow__modal header-narrow__modal--active jsHeaderNarrow__modal">
+      <ul class="header__links menu">
+        <li class="header__link-ctx menu-link-ctx">
+          <a class="header__link menu-link" href="#">Home</a>
+        </li>
+        <li class="header__link-ctx menu-link-ctx">
+          <a class="header__link menu-link" href="#">About</a>
+        </li>
+        <li class="header__link-ctx menu-link-ctx">
+          <a class="header__link menu-link" href="#">Contact</a>
+        </li>
+        <li class="header__link-ctx menu-link-ctx">
+          <a class="header__link menu-link" href="#">Blog</a>
+        </li>
+        <li class="header__link-ctx menu-link-ctx">
+          <a class="header__link menu-link" href="#">Careers</a>
+        </li>
+      </ul>
+    </div>
   </nav>
+  <div class="header__wide header-wide">
+    <a class="header__logo-ctx" href="#">
+      <img class="header__logo" src="./img/logo.svg" alt="logo" />
+    </a>
+    <nav class="header__nav">
+      <div class="header__bar">
+        <ul class="header__links menu">
+          <li class="header__link-ctx menu-link-ctx">
+            <a class="header__link menu-link" href="#">Home</a>
+          </li>
+          <li class="header__link-ctx menu-link-ctx">
+            <a class="header__link menu-link" href="#">About</a>
+          </li>
+          <li class="header__link-ctx menu-link-ctx">
+            <a class="header__link menu-link" href="#">Contact</a>
+          </li>
+          <li class="header__link-ctx menu-link-ctx">
+            <a class="header__link menu-link" href="#">Blog</a>
+          </li>
+          <li class="header__link-ctx menu-link-ctx">
+            <a class="header__link menu-link" href="#">Careers</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__modal">
+      </div>
+    </nav>
+  </div>
 
   <div class="header__cta-ctx">
     <a class="header__cta button" href="#">Request Invite</a>
   </div>
 </header>
-
 <main class="main">
   <section class="section section--bg_light hero">
     <div class="hero__media-ctx">
