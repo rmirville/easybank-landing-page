@@ -108,14 +108,6 @@ a:hover {
   color: black;
 }
 
-.header__nav-close {
-  display: none;
-}
-
-.header__nav-open:focus {
-  display: none;
-}
-
 .header__cta-ctx {
   display: none;
 }

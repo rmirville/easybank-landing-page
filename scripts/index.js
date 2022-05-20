@@ -1,6 +1,24 @@
 const EasyBank = {
   init: function() {
-    const navElem = document.querySelector('.header__nav');
+    const navOpenElem = document.querySelector('.jsHeader__navOpen');
+    const navCloseElem = document.querySelector('.jsHeader__navClose');
+    const menuElem = document.querySelector('.jsHeaderNarrow__modal');
+    navOpenElem.addEventListener('click', () => {
+      navOpenElem.classList.remove('header__nav-icon-ctx--active');
+      navOpenElem.classList.add('header__nav-icon-ctx--inactive');
+
+      navCloseElem.classList.remove('header__nav-icon-ctx--inactive');
+      navCloseElem.classList.add('header__nav-icon-ctx--active');
+      menuElem.classList.add('header-narrow__modal--active');
+    });
+    navCloseElem.addEventListener('click', () => {
+      navCloseElem.classList.remove('header__nav-icon-ctx--active');
+      navCloseElem.classList.add('header__nav-icon-ctx--inactive');
+
+      navOpenElem.classList.remove('header__nav-icon-ctx--inactive');
+      navOpenElem.classList.add('header__nav-icon-ctx--active');
+      menuElem.classList.remove('header-narrow__modal--active');
+    });
   },
 
   loadHandler: function() {
@@ -8,10 +26,10 @@ const EasyBank = {
     if (document.readyState === 'complete') {
       
       // remove the listener, to make sure it isn't fired in the future
-      document.detachEvent('onreadystatechange', loadHandler);
+      document.detachEvent('onreadystatechange', this.loadHandler);
       
       // The actual handler...
-      init();
+      this.init();
     }
   }
 };
