@@ -9,9 +9,11 @@
 
 
 .header-narrow
+  z-index: 1200
   position: fixed
   top: 0
   left: 0
+  width: 100%
 
 .header-narrow__modal
   display: none
@@ -22,7 +24,7 @@
   min-height: 100vh
   height: auto
   background-color: hsla(0, 0%, 0%, 0.5)
-  padding: 24px
+  padding: 24px 37px 24px 32px
 
 .header-narrow__modal--active
   display: block
@@ -46,7 +48,7 @@
   justify-content: space-between
   height: 20px
   background-color: $color-light-bg
-  padding: 22px 16px
+  padding: 22px 24px
 
 .header__nav
   text-align: right
@@ -54,18 +56,19 @@
 
 .header__nav-icon-ctx
   cursor: pointer
+  height: 20px
+  line-height: 20px
+  padding: 1px 0
 
 .header__nav-icon-ctx--active
-  display: inline-block
+  display: block
 
 .header__nav-icon-ctx--inactive
   display: none
 
-.header__nav-open
-  padding: 5px 1px
-
 .header__nav-close
-  padding: 1px 3px
+  padding-left: 3px
+  padding-right: 3px
 
 .header__links
   text-align: center
