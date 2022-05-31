@@ -1,7 +1,15 @@
 .section
   text-align: center
+  padding: 64px 25px 50px
+
+.section--bg_light
+  background-color: $color-light-bg-secondary
+
+.section--bg_dark
+  background-color: $color-light-bg-ternary
 
 .section__heading
+  margin: 0
   font-size: 31px
   line-height: 37px
   letter-spacing: 0
@@ -85,13 +93,21 @@
 
 
 
+.columns
+  padding-top: 24px
+
+.column
+  padding-top: 17px
+
 .column__heading
+  margin: 19px 0 17px
   font-size: 20px
   letter-spacing: -.4px
 
 
 
 .footer
+  padding-top: 40px
   background-color: $color-ctx-dark-bg
   text-align: center
 
@@ -101,6 +117,13 @@
 
 .footer__link:hover .footer__icon
   fill: $color-active-primary
+
+.footer__icons
+  display: flex
+  justify-content: center
+
+.footer__icon-ctx
+  margin: 0 8px
 
 .footer__icon
   fill: $color-ctx-dark-link
