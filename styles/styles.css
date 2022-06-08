@@ -20,24 +20,72 @@ a:hover {
   color: #31d35c;
 }
 
-.section {
+.columns {
+  padding-top: 24px;
+}
+
+.column {
+  padding-top: 17px;
+}
+
+.column__heading {
+  margin: 19px 0 17px;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #2d314d;
   text-align: center;
-  padding: 64px 25px 50px;
 }
 
-.section--bg_light {
-  background-color: #fafafa;
+.footer__logo, .footer__icons {
+  margin-bottom: 24px;
 }
 
-.section--bg_dark {
-  background-color: #f3f4f6;
+.footer__nav {
+  margin: 28px 0;
 }
 
-.section__heading {
-  margin: 0;
-  font-size: 31px;
-  line-height: 37px;
-  letter-spacing: 0;
+.footer__link {
+  line-height: 34px;
+  color: white;
+}
+
+.footer__link:hover .footer__icon {
+  fill: #31d35c;
+}
+
+.footer__icons {
+  display: flex;
+  width: 185px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__icon-link {
+  height: auto;
+  max-height: 25px;
+}
+
+.footer__icon-ctx {
+  width: 25px;
+  height: 25px;
+}
+
+.footer__icon {
+  fill: white;
+}
+
+.footer__cta-ctx {
+  margin-bottom: 22px;
+}
+
+.footer__copy {
+  margin-bottom: 0;
 }
 
 .header-narrow {
@@ -123,72 +171,24 @@ a:hover {
   display: none;
 }
 
-.columns {
-  padding-top: 24px;
-}
-
-.column {
-  padding-top: 17px;
-}
-
-.column__heading {
-  margin: 19px 0 17px;
-  font-size: 20px;
-  letter-spacing: -0.4px;
-}
-
-.footer {
-  padding: 40px 0;
-  background-color: #2d314d;
+.section {
   text-align: center;
+  padding: 64px 25px 50px;
 }
 
-.footer__logo, .footer__icons {
-  margin-bottom: 24px;
+.section--bg_light {
+  background-color: #fafafa;
 }
 
-.footer__nav {
-  margin: 28px 0;
+.section--bg_dark {
+  background-color: #f3f4f6;
 }
 
-.footer__link {
-  line-height: 34px;
-  color: white;
-}
-
-.footer__link:hover .footer__icon {
-  fill: #31d35c;
-}
-
-.footer__icons {
-  display: flex;
-  width: 185px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer__icon-link {
-  height: auto;
-  max-height: 25px;
-}
-
-.footer__icon-ctx {
-  width: 25px;
-  height: 25px;
-}
-
-.footer__icon {
-  fill: white;
-}
-
-.footer__cta-ctx {
-  margin-bottom: 22px;
-}
-
-.footer__copy {
-  margin-bottom: 0;
+.section__heading {
+  margin: 0;
+  font-size: 31px;
+  line-height: 37px;
+  letter-spacing: 0;
 }
 
 .articles {
