@@ -31,6 +31,10 @@
 .header-wide
   display: none
 
+.header-wide__links
+  display: flex
+  justify-content: space-between
+
 
 
 .header__bar
@@ -68,7 +72,19 @@
   line-height: 45px
   color: $color-light-heading
 
+.header__logo-ctx, .header__cta-ctx
+  display: flex
+  align-items: center
+
+.header__nav
+  justify-content: center
 
 
-.header__cta-ctx
-  display: none
+
+@media (min-width: $brkpnt-desk-min)
+  .header-narrow
+    display: none
+
+  .header-wide
+    display: flex
+    justify-content: space-between
