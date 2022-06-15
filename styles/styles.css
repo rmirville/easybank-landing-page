@@ -34,6 +34,13 @@ a:hover {
   letter-spacing: -0.4px;
 }
 
+@media (min-width: 1080px) {
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
 .footer {
   padding: 40px 0;
   background-color: #2d314d;
@@ -211,6 +218,11 @@ a:hover {
   letter-spacing: 0;
 }
 
+@media (min-width: 1080px) {
+  .section {
+    text-align: left;
+  }
+}
 .articles {
   padding-top: 88px;
 }
@@ -280,6 +292,18 @@ a:hover {
   letter-spacing: -0.2px;
 }
 
+@media (min-width: 1080px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .card__media-ctx {
+    height: auto;
+    max-height: 156px;
+  }
+}
 .hero {
   background-image: url("../img/bg-intro-mobile.svg");
   background-size: contain;
