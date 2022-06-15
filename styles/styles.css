@@ -104,8 +104,8 @@ a:hover {
   width: 100vw;
   min-height: 100vh;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 24px 37px 24px 32px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 313px, transparent calc(100vh - 80px));
+  padding: 24px;
 }
 
 .header-narrow__modal--active {
@@ -172,6 +172,15 @@ a:hover {
   color: black;
 }
 
+.header__logo-ctx, .header__cta-ctx {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  justify-content: center;
+}
+
 @media (min-width: 1080px) {
   .header-narrow {
     display: none;
@@ -180,15 +189,6 @@ a:hover {
   .header-wide {
     display: flex;
     justify-content: space-between;
-  }
-
-  .header__logo-ctx, .header__cta-ctx {
-    display: flex;
-    align-items: center;
-  }
-
-  .header__nav {
-    justify-content: center;
   }
 }
 .section {
