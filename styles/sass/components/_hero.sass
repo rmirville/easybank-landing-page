@@ -1,5 +1,4 @@
 .hero
-  text-align: center
   background-image: url('../img/bg-intro-mobile.svg')
   background-size: contain
   background-repeat: no-repeat
@@ -29,3 +28,23 @@
 
 .hero__heading
   margin: 0
+
+@media (min-width: $brkpnt-desk-min)
+  .hero
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    background-image: url("../img/bg-intro-desktop.svg")
+    background-position: 100% 0
+
+  .hero__media-ctx, .hero__content
+    box-sizing: border-box
+
+  .hero__media-ctx
+    grid-area: 1/2
+    height: calc(100vw * .49)
+
+  .hero__content
+    grid-area: 1/1
+
+  .hero__img
+    width: 100%
