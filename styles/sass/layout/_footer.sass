@@ -40,3 +40,24 @@
 
 .footer__copy
   margin-bottom: 0
+
+
+
+@media (min-width: $brkpnt-desk-min)
+  .footer
+    display: flex
+    justify-content: space-between
+
+  .footer__section
+    text-align: left
+
+  .footer__section--last
+    text-align: right
+
+  .footer__nav
+    margin: 0
+
+  .footer__links
+    display: grid
+    grid-auto-flow: column
+    grid-template-rows: repeat(3, 1fr)

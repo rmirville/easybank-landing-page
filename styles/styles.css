@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;1,700&display=swap");
 html {
+  overflow-x: hidden;
   font-family: "Public Sans", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 25px;
@@ -95,6 +96,30 @@ a:hover {
   margin-bottom: 0;
 }
 
+@media (min-width: 1080px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__section {
+    text-align: left;
+  }
+
+  .footer__section--last {
+    text-align: right;
+  }
+
+  .footer__nav {
+    margin: 0;
+  }
+
+  .footer__links {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
 .header-narrow {
   z-index: 1200;
   position: fixed;
