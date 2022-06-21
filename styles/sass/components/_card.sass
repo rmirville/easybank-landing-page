@@ -1,55 +1,55 @@
 .cards
-  padding: 32px 0 14px
+	padding: 32px 0 14px
 
 .card
-  margin-bottom: 24px
-  background-color: $color-light-bg
-  border-radius: 5px
-  overflow: hidden
-  text-align: left
+	margin-bottom: 24px
+	background-color: $color-light-bg
+	border-radius: 5px
+	overflow: hidden
+	text-align: left
 
 .card__media-ctx
-  height: calc((100vw - 50px) * 8 / 13)
-  overflow: hidden
+	height: calc((100vw - 50px) * 8 / 13)
+	overflow: hidden
 
 .card__media
-  width: 100%
+	width: 100%
 
 .card__content
-  padding: 22px 30px 41px
+	padding: 22px 30px 41px
 
 .card__heading
-  margin: 0 0 8px
-  font-size: 16px
-  line-height: 20px
+	margin: 0 0 8px
+	font-size: 16px
+	line-height: 20px
 
 .card__subtitle
-  margin: 0 0 5px
-  font-size: 9px
-  letter-spacing: -.15px
+	margin: 0 0 5px
+	font-size: 9px
+	letter-spacing: -.15px
 
 .card__text
-  margin: 0 0
-  font-size: 13px
-  line-height: 18px
-  letter-spacing: -.2px
+	margin: 0 0
+	font-size: 13px
+	line-height: 18px
+	letter-spacing: -.2px
 
 
 
 @media (min-width: $brkpnt-desk-min)
-  .cards
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    gap: 24px
+	.cards
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		gap: 24px
 
 
-  .card__media-ctx
-    height: auto
-    max-height: 156px
+	.card__media-ctx
+		height: auto
+		max-height: 156px
 
-  .card__subtitle
-    font-size: 10px
+	.card__subtitle
+		font-size: 10px
 
-  .card__text
-    letter-spacing: -0.1px
-    font-weight: 300
+	.card__text
+		letter-spacing: -0.1px
+		font-weight: 300

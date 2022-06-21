@@ -5,7 +5,7 @@ html {
   font-size: 15px;
   line-height: 25px;
   letter-spacing: -0.25px;
-  color: #9698a6;
+  color: hsl(233deg, 8%, 62%);
 }
 
 body {
@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:hover {
-  color: #31d35c;
+  color: hsl(136deg, 65%, 51%);
 }
 
 @media (min-width: 1080px) {
@@ -47,11 +47,9 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
-
   .column__heading {
     font-size: 24px;
   }
-
   .column__text {
     font-size: 16px;
     line-height: 26px;
@@ -59,7 +57,7 @@ a:hover {
 }
 .footer {
   padding: 40px 0;
-  background-color: #2d314d;
+  background-color: hsl(233deg, 26%, 24%);
   text-align: center;
 }
 
@@ -77,7 +75,7 @@ a:hover {
 }
 
 .footer__link:hover .footer__icon {
-  fill: #31d35c;
+  fill: hsl(136deg, 65%, 51%);
 }
 
 .footer__icons {
@@ -116,38 +114,30 @@ a:hover {
     display: flex;
     justify-content: space-between;
   }
-
   .footer__section {
     text-align: left;
   }
-
   .footer__section--last {
     text-align: right;
   }
-
   .footer__icon-link {
     max-height: 22px;
   }
-
   .footer__icon-ctx {
     width: 22px;
     height: 22px;
   }
-
   .footer__nav {
     margin: 0;
   }
-
   .footer__links {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(3, 1fr);
   }
-
   .footer__link, .footer__copy {
     font-size: 15px;
   }
-
   .footer__link {
     font-weight: 300;
   }
@@ -249,12 +239,10 @@ a:hover {
   .header-narrow {
     display: none;
   }
-
   .header-wide {
     display: flex;
     justify-content: space-between;
   }
-
   .header__link {
     font-size: 14px;
   }
@@ -265,11 +253,11 @@ a:hover {
 }
 
 .section--bg_light {
-  background-color: #fafafa;
+  background-color: hsl(0deg, 0%, 98%);
 }
 
 .section--bg_dark {
-  background-color: #f3f4f6;
+  background-color: hsl(220deg, 16%, 96%);
 }
 
 .section__heading {
@@ -283,7 +271,6 @@ a:hover {
   .section {
     text-align: left;
   }
-
   .section__heading {
     font-size: 40px;
     letter-spacing: -0.6px;
@@ -302,7 +289,7 @@ a:hover {
   border-radius: 34px;
   padding: 10px 34px;
   background-color: white;
-  background-image: linear-gradient(135deg, #31d35c, #2bb7da);
+  background-image: linear-gradient(135deg, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
   vertical-align: middle;
   font-size: 15px;
   font-weight: 700;
@@ -311,7 +298,7 @@ a:hover {
 }
 
 .button:hover {
-  background-image: linear-gradient(135deg, rgba(49, 211, 92, 0.5), rgba(43, 183, 218, 0.5));
+  background-image: linear-gradient(135deg, hsla(136deg, 65%, 51%, 0.5), hsla(192deg, 70%, 51%, 0.5));
 }
 
 @media (min-width: 1080px) {
@@ -369,16 +356,13 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
-
   .card__media-ctx {
     height: auto;
     max-height: 156px;
   }
-
   .card__subtitle {
     font-size: 10px;
   }
-
   .card__text {
     letter-spacing: -0.1px;
     font-weight: 300;
@@ -400,7 +384,7 @@ a:hover {
   z-index: 12;
   position: relative;
   overflow-y: clip;
-  height: calc(100vw * .97);
+  height: 97vw;
 }
 
 .hero__img {
@@ -429,25 +413,20 @@ a:hover {
     background-image: url("../img/bg-intro-desktop.svg");
     background-position: 100% 0;
   }
-
   .hero__media-ctx, .hero__content {
     box-sizing: border-box;
   }
-
   .hero__media-ctx {
     grid-area: 1/2;
-    height: calc(100vw * .49);
+    height: 49vw;
   }
-
   .hero__content {
     grid-area: 1/1;
   }
-
   .hero__heading {
     font-size: 54px;
     line-height: 1.2;
   }
-
   .hero__img {
     width: 100%;
   }

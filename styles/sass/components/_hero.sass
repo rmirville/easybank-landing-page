@@ -1,54 +1,54 @@
 .hero
-  background-image: url('../img/bg-intro-mobile.svg')
-  background-size: contain
-  background-repeat: no-repeat
-  padding: 0
+	background-image: url('../img/bg-intro-mobile.svg')
+	background-size: contain
+	background-repeat: no-repeat
+	padding: 0
 
 .hero__heading
-  font-size: 39px
-  line-height: 47px
+	font-size: 39px
+	line-height: 47px
 
 .hero__media-ctx
-  z-index: 12
-  position: relative
-  overflow-y: clip
-  height: calc(100vw * .97)
+	z-index: 12
+	position: relative
+	overflow-y: clip
+	height: calc(100vw * .97)
 
 .hero__img
-  position: absolute
-  bottom: 2px
-  left: 15px
-  width: calc(100vw - 32px)
+	position: absolute
+	bottom: 2px
+	left: 15px
+	width: calc(100vw - 32px)
 
 .hero__content
-  padding: 23px 10px 88px
+	padding: 23px 10px 88px
 
 .hero__text
-  margin-bottom: 30px
+	margin-bottom: 30px
 
 .hero__heading
-  margin: 0
+	margin: 0
 
 @media (min-width: $brkpnt-desk-min)
-  .hero
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    background-image: url("../img/bg-intro-desktop.svg")
-    background-position: 100% 0
+	.hero
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		background-image: url("../img/bg-intro-desktop.svg")
+		background-position: 100% 0
 
-  .hero__media-ctx, .hero__content
-    box-sizing: border-box
+	.hero__media-ctx, .hero__content
+		box-sizing: border-box
 
-  .hero__media-ctx
-    grid-area: 1/2
-    height: calc(100vw * .49)
+	.hero__media-ctx
+		grid-area: 1/2
+		height: calc(100vw * .49)
 
-  .hero__content
-    grid-area: 1/1
+	.hero__content
+		grid-area: 1/1
 
-  .hero__heading
-    font-size: 54px
-    line-height: 1.2
+	.hero__heading
+		font-size: 54px
+		line-height: 1.2
 
-  .hero__img
-    width: 100%
+	.hero__img
+		width: 100%
