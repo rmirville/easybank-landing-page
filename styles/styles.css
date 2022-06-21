@@ -110,7 +110,7 @@ a:hover {
 }
 
 @media (min-width: 1080px) {
-  .footer {
+  .footer__inner {
     display: flex;
     justify-content: space-between;
   }
@@ -244,6 +244,7 @@ a:hover {
     justify-content: space-between;
   }
   .header__link {
+    padding: 16px;
     font-size: 14px;
   }
 }
@@ -269,7 +270,15 @@ a:hover {
 
 @media (min-width: 1080px) {
   .section {
+    padding-left: 0;
+    padding-right: 0;
     text-align: left;
+  }
+  .section-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1110px;
+    padding: 0 24px;
   }
   .section__heading {
     font-size: 40px;
@@ -408,10 +417,12 @@ a:hover {
 
 @media (min-width: 1080px) {
   .hero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     background-image: url("../img/bg-intro-desktop.svg");
     background-position: 100% 0;
+  }
+  .hero__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .hero__media-ctx, .hero__content {
     box-sizing: border-box;
@@ -422,6 +433,8 @@ a:hover {
   }
   .hero__content {
     grid-area: 1/1;
+    padding-left: 0;
+    padding-right: 0;
   }
   .hero__heading {
     font-size: 54px;

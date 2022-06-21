@@ -31,10 +31,12 @@
 
 @media (min-width: $brkpnt-desk-min)
 	.hero
-		display: grid
-		grid-template-columns: repeat(2, 1fr)
 		background-image: url("../img/bg-intro-desktop.svg")
 		background-position: 100% 0
+
+	.hero__inner
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
 
 	.hero__media-ctx, .hero__content
 		box-sizing: border-box
@@ -45,6 +47,8 @@
 
 	.hero__content
 		grid-area: 1/1
+		padding-left: 0
+		padding-right: 0
 
 	.hero__heading
 		font-size: 54px
