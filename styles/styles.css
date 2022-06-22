@@ -120,6 +120,9 @@ a:hover {
   .footer__section--last {
     text-align: right;
   }
+  .footer__icons {
+    width: 154px;
+  }
   .footer__icon-link {
     max-height: 22px;
   }
@@ -134,6 +137,7 @@ a:hover {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 128px;
   }
   .footer__link, .footer__copy {
     font-size: 15px;
@@ -285,6 +289,9 @@ a:hover {
     margin-right: auto;
     max-width: 1110px;
     padding: 0 24px;
+  }
+  .section__heading, .section__text {
+    width: 60%;
   }
   .section__heading {
     font-size: 40px;
