@@ -142,8 +142,11 @@ a:hover {
     font-weight: 300;
   }
 }
-.header-narrow {
+.header-narrow, .header-wide {
   z-index: 1200;
+}
+
+.header-narrow {
   position: fixed;
   top: 0;
   left: 0;
@@ -176,6 +179,8 @@ a:hover {
 
 .header-wide {
   display: none;
+  position: relative;
+  background-color: white;
 }
 
 .header-wide__links {
@@ -421,18 +426,21 @@ a:hover {
     background-origin: border-box;
     background-size: 1280px;
     background-position-x: calc(50vw - 100px);
-    background-position-y: -260px;
+    background-position-y: -262px;
   }
   .hero__inner {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    height: auto;
+    min-height: 655px;
   }
   .hero__media-ctx, .hero__content {
     box-sizing: border-box;
   }
   .hero__media-ctx {
     grid-area: 1/2;
-    height: 502px;
+    height: auto;
+    overflow: visible;
   }
   .hero__content {
     grid-area: 1/1;
@@ -448,7 +456,9 @@ a:hover {
     line-height: 1.2;
   }
   .hero__img {
-    width: 100%;
+    top: -122px;
+    bottom: unset;
+    width: 766px;
   }
 }
 .menu {

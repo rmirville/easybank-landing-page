@@ -35,18 +35,21 @@
 		background-origin: border-box
 		background-size: 1280px
 		background-position-x: calc(50vw - 100px)
-		background-position-y: -260px
+		background-position-y: -262px
 
 	.hero__inner
 		display: grid
 		grid-template-columns: 2fr 3fr
+		height: auto
+		min-height: 655px
 
 	.hero__media-ctx, .hero__content
 		box-sizing: border-box
 
 	.hero__media-ctx
 		grid-area: 1/2
-		height: 502px
+		height: auto
+		overflow: visible
 
 	.hero__content
 		grid-area: 1/1
@@ -62,4 +65,6 @@
 		line-height: 1.2
 
 	.hero__img
-		width: 100%
+		top: -122px
+		bottom: unset
+		width: 766px
