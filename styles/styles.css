@@ -251,6 +251,7 @@ a:hover {
   .header__link {
     padding: 16px;
     font-size: 14px;
+    color: hsl(233deg, 8%, 62%);
   }
 }
 .section {
