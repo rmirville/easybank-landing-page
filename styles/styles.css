@@ -418,23 +418,30 @@ a:hover {
 @media (min-width: 1080px) {
   .hero {
     background-image: url("../img/bg-intro-desktop.svg");
-    background-position: 100% 0;
+    background-origin: border-box;
+    background-size: 1280px;
+    background-position-x: calc(50vw - 100px);
+    background-position-y: -260px;
   }
   .hero__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 3fr;
   }
   .hero__media-ctx, .hero__content {
     box-sizing: border-box;
   }
   .hero__media-ctx {
     grid-area: 1/2;
-    height: 49vw;
+    height: 502px;
   }
   .hero__content {
     grid-area: 1/1;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 170px;
+  }
+  .hero__text {
+    margin-top: 22px;
   }
   .hero__heading {
     font-size: 54px;
