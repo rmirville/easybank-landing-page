@@ -61,8 +61,12 @@ a:hover {
   text-align: center;
 }
 
-.footer__logo, .footer__icons {
+.footer__logo-ctx, .footer__icons {
   margin-bottom: 24px;
+}
+
+.footer__logo-ctx {
+  display: block;
 }
 
 .footer__nav {
@@ -110,18 +114,29 @@ a:hover {
 }
 
 @media (min-width: 1080px) {
-  .footer__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer__section {
+  .footer {
+    padding: 48px 0 44px;
     text-align: left;
   }
+  .footer__section {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+  }
+  .footer__section--first {
+    margin-right: 126px;
+  }
   .footer__section--last {
+    float: right;
     text-align: right;
+  }
+  .footer__logo-ctx {
+    height: 20px;
+    margin-bottom: 55px;
   }
   .footer__icons {
     width: 154px;
+    margin: 0;
   }
   .footer__icon-link {
     max-height: 22px;
@@ -138,12 +153,21 @@ a:hover {
     grid-auto-flow: column;
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 128px;
+    grid-row-gap: 8px;
+    margin: 0;
   }
   .footer__link, .footer__copy {
     font-size: 15px;
   }
+  .footer__link-ctx {
+    line-height: 1;
+  }
   .footer__link {
+    line-height: 26px;
     font-weight: 300;
+  }
+  .footer__cta-ctx {
+    margin-bottom: 24px;
   }
 }
 .header-narrow, .header-wide {
