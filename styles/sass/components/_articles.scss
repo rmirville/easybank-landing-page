@@ -1,0 +1,11 @@
+.articles {
+	padding-top: 90px;
+	padding-bottom: 50px;
+}
+
+@media (min-width: $brkpnt-desk-min) {
+	.articles {
+		padding-top: 93px;
+		padding-bottom: 43px;
+	}
+}

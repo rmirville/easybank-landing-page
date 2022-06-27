@@ -1,0 +1,23 @@
+// breakpoints
+$brkpnt-phone-max: 575px;
+$brkpnt-tab-min: 576px;
+$brkpnt-tab-max: 1079px;
+$brkpnt-desk-min: 1080px;
+
+// colors
+$color-light-bg: white;
+$color-light-bg-secondary: hsl(0, 0%, 98%);
+$color-light-bg-ternary: hsl(220, 16%, 96%);
+$color-light-text: hsl(233, 8%, 62%);
+$color-light-heading: black;
+
+$color-active-primary: hsl(136, 65%, 51%);
+$color-active-primary-transparent: hsla(136, 65%, 51%, 50%);
+$color-active-secondary: hsl(192, 70%, 51%);
+$color-active-secondary-transparent: hsla(192, 70%, 51%, 50%);
+
+$color-ctx-dark-bg: hsl(233,26%,24%);
+$color-ctx-dark-link: white;
+
+// animation
+$transition-duration: 0.2s;

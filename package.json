@@ -4,8 +4,7 @@
   "description": "Landing page created with Sass using BEML-naming standards",
   "main": "index.html",
   "scripts": {
-    "build": "sass styles/main.sass:styles/styles.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass styles/sass/main.scss:styles/styles.css"
   },
   "repository": {
     "type": "git",
