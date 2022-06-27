@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
+a {
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
 a:hover {
   color: hsl(136deg, 65%, 51%);
 }
@@ -79,10 +84,6 @@ a:hover {
   color: white;
 }
 
-.footer__link:hover .footer__icon {
-  fill: hsl(136deg, 65%, 51%);
-}
-
 .footer__icons {
   display: flex;
   width: 185px;
@@ -104,6 +105,12 @@ a:hover {
 
 .footer__icon {
   fill: white;
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.footer__icon-link:hover .footer__icon {
+  fill: hsl(136deg, 65%, 51%);
 }
 
 .footer__cta-ctx {
@@ -339,6 +346,8 @@ a:hover {
 
 .button {
   display: inline-block;
+  position: relative;
+  z-index: 12;
   border-radius: 34px;
   padding: 10px 34px;
   background-color: white;
@@ -350,8 +359,23 @@ a:hover {
   text-decoration: none;
 }
 
-.button:hover {
-  background-image: linear-gradient(135deg, hsla(136deg, 65%, 51%, 0.5), hsla(192deg, 70%, 51%, 0.5));
+.button:before {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 24;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transition-property: all;
+  transition-duration: 0.2s;
+  background-color: hsla(0deg, 0%, 100%, 0.3);
+  content: "";
+}
+
+.button:hover:before {
+  opacity: 1;
 }
 
 @media (min-width: 1080px) {

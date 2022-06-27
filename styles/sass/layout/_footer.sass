@@ -16,9 +16,6 @@
 	line-height: 34px
 	color: $color-ctx-dark-link
 
-.footer__link:hover .footer__icon
-	fill: $color-active-primary
-
 .footer__icons
 	display: flex
 	width: 185px
@@ -37,6 +34,11 @@
 
 .footer__icon
 	fill: $color-ctx-dark-link
+	transition-property: all
+	transition-duration: $transition-duration
+
+.footer__icon-link:hover .footer__icon
+	fill: $color-active-primary
 
 .footer__cta-ctx
 	margin-bottom: 22px
