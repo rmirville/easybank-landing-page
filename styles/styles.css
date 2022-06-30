@@ -195,7 +195,7 @@ a:hover {
 .header-narrow__modal {
   display: none;
   position: absolute;
-  top: -100vh;
+  top: -1000px;
   left: 0;
   box-sizing: border-box;
   width: 100vw;
@@ -204,21 +204,21 @@ a:hover {
   padding: 24px;
 }
 
-.header-narrow__modal--active {
+.jsHeaderNarrow__modal--active {
   display: block;
   top: 64px;
   animation: 600ms ease-in 0s 1 normal menu_appear;
   -webkit-animation: 600ms ease-in 0s 1 normal menu_appear;
 }
 
-.header-narrow__modal--inactive {
+.jsHeaderNarrow__modal--inactive {
   animation: 600ms ease-out 0s 1 normal menu_appear;
   -webkit-animation: 600ms ease-out 0s 1 normal menu_appear;
 }
 
 @-webkit-keyframes menu_appear {
   from {
-    top: -100vh;
+    top: -1000px;
   }
   to {
     top: 64px;
@@ -226,7 +226,7 @@ a:hover {
 }
 @keyframes menu_appear {
   from {
-    top: -100vh;
+    top: -1000px;
   }
   to {
     top: 64px;
@@ -237,7 +237,7 @@ a:hover {
     top: 64px;
   }
   to {
-    top: -100vh;
+    top: -1000px;
   }
 }
 @keyframes menu_disappear {
@@ -245,7 +245,7 @@ a:hover {
     top: 64px;
   }
   to {
-    top: -100vh;
+    top: -1000px;
   }
 }
 .header__overlay {
@@ -257,9 +257,11 @@ a:hover {
   height: 100vh;
 }
 
-.header__overlay--active {
+.jsHeader__overlay--active {
   display: block;
   background: linear-gradient(rgba(0, 0, 0, 0.5) 313px, transparent calc(100vh - 80px));
+  -webkit-animation: 200ms ease-in 0s 1 normal overlay_appear;
+  animation: 200ms ease-in 0s 1 normal overlay_appear;
 }
 
 @-webkit-keyframes overlay_appear {

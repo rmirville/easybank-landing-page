@@ -26,8 +26,8 @@ const EasyBank = {
 		};
 		const navOpen = this.elem('.jsHeader__navOpen', navIcon.active, navIcon.inactive);
 		const navClose = this.elem('.jsHeader__navClose', navIcon.active, navIcon.inactive);
-		const menu = this.elem('.jsHeaderNarrow__modal', 'header-narrow__modal--active', 'header-narrow__modal--inactive');
-		const overlay = this.elem('.jsHeader__overlay', 'header__overlay--active', 'header__overlay--inactive');
+		const menu = this.elem('.jsHeaderNarrow__modal', 'jsHeaderNarrow__modal--active', 'jsHeaderNarrow__modal--inactive');
+		const overlay = this.elem('.jsHeader__overlay', 'jsHeader__overlay--active', 'jsHeader__overlay--inactive');
     navOpen.el.addEventListener('click', () => {
       navOpen.deactivate();
       navClose.activate();
