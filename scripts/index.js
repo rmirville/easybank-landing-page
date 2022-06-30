@@ -1,50 +1,46 @@
 const EasyBank = {
+	elem: function(selector, active, inactive) {
+		const el = document.querySelector(selector);
+		const activate = () => {
+			if (el) {
+				el.classList.remove(inactive);
+				el.classList.add(active);
+			}
+		};
+		const deactivate = () => {
+			if (el) {
+				el.classList.remove(active);
+				el.classList.add(inactive);
+			}
+		};
+		return {
+			el,
+			activate,
+			deactivate,
+		};
+	},
   init: function() {
 		const navIcon = {
 			active: 'header__nav-icon-ctx--active',
 			inactive: 'header__nav-icon-ctx--inactive',
 		};
-		const navOpen = {
-			selector: '.jsHeader__navOpen',
-			elem: null,
-		};
-		const navClose = {
-			selector: '.jsHeader__navClose',
-			elem: null,
-		};
-		const menu = {
-			selector: '.jsHeaderNarrow__modal',
-			elem: null,
-		};
-		const overlay = {
-			selector: '.jsHeader__overlay',
-			elem: null,
-		};
-    navOpen.elem = document.querySelector(navOpen.selector);
-    navClose.elem = document.querySelector(navClose.selector);
-    menu.elem = document.querySelector(menu.selector);
-		overlay.elem = document.querySelector(overlay.selector);
-    navOpen.elem.addEventListener('click', () => {
-      navOpen.elem.classList.remove(navIcon.active);
-      navOpen.elem.classList.add(navIcon.inactive);
+		const navOpen = this.elem('.jsHeader__navOpen', navIcon.active, navIcon.inactive);
+		const navClose = this.elem('.jsHeader__navClose', navIcon.active, navIcon.inactive);
+		const menu = this.elem('.jsHeaderNarrow__modal', 'header-narrow__modal--active', 'header-narrow__modal--inactive');
+		const overlay = this.elem('.jsHeader__overlay', 'header__overlay--active', 'header__overlay--inactive');
+    navOpen.el.addEventListener('click', () => {
+      navOpen.deactivate();
+      navClose.activate();
 
-      navClose.elem.classList.remove(navIcon.inactive);
-      navClose.elem.classList.add(navIcon.active);
-
-      menu.elem.classList.add('header-narrow__modal--active');
-			overlay.elem.classList.add('header__overlay--active');
+			overlay.activate();
+      menu.activate();
     });
-    navClose.elem.addEventListener('click', () => {
-      navClose.elem.classList.remove(navIcon.active);
-      navClose.elem.classList.add(navIcon.inactive);
+    navClose.el.addEventListener('click', () => {
+      navClose.deactivate();
+      navOpen.activate();
 
-      navOpen.elem.classList.remove(navIcon.inactive);
-      navOpen.elem.classList.add(navIcon.active);
-
-      menu.elem.classList.remove('header-narrow__modal--active');
-			menu.elem.classList.add('header-narrow__modal--inactive');
-			overlay.elem.classList.remove('header__overlay--active');
-			overlay.elem.classList.add('header__overlay--inactive');
+      menu.deactivate();
+			overlay.deactivate();
     });
   },
 
