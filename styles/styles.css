@@ -178,7 +178,8 @@ a:hover {
     margin-bottom: 24px;
   }
 }
-.header {
+.header,
+.header__bar {
   position: relative;
   z-index: 1200;
   background-color: white;
@@ -193,20 +194,90 @@ a:hover {
 
 .header-narrow__modal {
   display: none;
-  top: 64px;
+  position: absolute;
+  top: -100vh;
   left: 0;
   box-sizing: border-box;
   width: 100vw;
   min-height: 100vh;
   height: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.5) 313px, transparent calc(100vh - 80px));
   padding: 24px;
 }
 
 .header-narrow__modal--active {
   display: block;
+  top: 64px;
+  animation: 600ms ease-in 0s 1 normal menu_appear;
+  -webkit-animation: 600ms ease-in 0s 1 normal menu_appear;
 }
 
+.header-narrow__modal--inactive {
+  animation: 600ms ease-out 0s 1 normal menu_appear;
+  -webkit-animation: 600ms ease-out 0s 1 normal menu_appear;
+}
+
+@-webkit-keyframes menu_appear {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 64px;
+  }
+}
+@keyframes menu_appear {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 64px;
+  }
+}
+@-webkit-keyframes menu_disappear {
+  from {
+    top: 64px;
+  }
+  to {
+    top: -100vh;
+  }
+}
+@keyframes menu_disappear {
+  from {
+    top: 64px;
+  }
+  to {
+    top: -100vh;
+  }
+}
+.header__overlay {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.header__overlay--active {
+  display: block;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 313px, transparent calc(100vh - 80px));
+}
+
+@-webkit-keyframes overlay_appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes overlay_appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header-narrow__links {
   margin: 0;
   border-radius: 5px;
@@ -228,7 +299,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   height: 20px;
-  background-color: white;
   padding: 22px 24px;
 }
 

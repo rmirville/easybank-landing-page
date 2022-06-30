@@ -1,33 +1,60 @@
 const EasyBank = {
   init: function() {
-    const navOpenElem = document.querySelector('.jsHeader__navOpen');
-    const navCloseElem = document.querySelector('.jsHeader__navClose');
-    const menuElem = document.querySelector('.jsHeaderNarrow__modal');
-    navOpenElem.addEventListener('click', () => {
-      navOpenElem.classList.remove('header__nav-icon-ctx--active');
-      navOpenElem.classList.add('header__nav-icon-ctx--inactive');
+		const navIcon = {
+			active: 'header__nav-icon-ctx--active',
+			inactive: 'header__nav-icon-ctx--inactive',
+		};
+		const navOpen = {
+			selector: '.jsHeader__navOpen',
+			elem: null,
+		};
+		const navClose = {
+			selector: '.jsHeader__navClose',
+			elem: null,
+		};
+		const menu = {
+			selector: '.jsHeaderNarrow__modal',
+			elem: null,
+		};
+		const overlay = {
+			selector: '.jsHeader__overlay',
+			elem: null,
+		};
+    navOpen.elem = document.querySelector(navOpen.selector);
+    navClose.elem = document.querySelector(navClose.selector);
+    menu.elem = document.querySelector(menu.selector);
+		overlay.elem = document.querySelector(overlay.selector);
+    navOpen.elem.addEventListener('click', () => {
+      navOpen.elem.classList.remove(navIcon.active);
+      navOpen.elem.classList.add(navIcon.inactive);
 
-      navCloseElem.classList.remove('header__nav-icon-ctx--inactive');
-      navCloseElem.classList.add('header__nav-icon-ctx--active');
-      menuElem.classList.add('header-narrow__modal--active');
+      navClose.elem.classList.remove(navIcon.inactive);
+      navClose.elem.classList.add(navIcon.active);
+
+      menu.elem.classList.add('header-narrow__modal--active');
+			overlay.elem.classList.add('header__overlay--active');
     });
-    navCloseElem.addEventListener('click', () => {
-      navCloseElem.classList.remove('header__nav-icon-ctx--active');
-      navCloseElem.classList.add('header__nav-icon-ctx--inactive');
+    navClose.elem.addEventListener('click', () => {
+      navClose.elem.classList.remove(navIcon.active);
+      navClose.elem.classList.add(navIcon.inactive);
 
-      navOpenElem.classList.remove('header__nav-icon-ctx--inactive');
-      navOpenElem.classList.add('header__nav-icon-ctx--active');
-      menuElem.classList.remove('header-narrow__modal--active');
+      navOpen.elem.classList.remove(navIcon.inactive);
+      navOpen.elem.classList.add(navIcon.active);
+
+      menu.elem.classList.remove('header-narrow__modal--active');
+			menu.elem.classList.add('header-narrow__modal--inactive');
+			overlay.elem.classList.remove('header__overlay--active');
+			overlay.elem.classList.add('header__overlay--inactive');
     });
   },
 
   loadHandler: function() {
     // check if the DOM is fully loaded
     if (document.readyState === 'complete') {
-      
+
       // remove the listener, to make sure it isn't fired in the future
       document.detachEvent('onreadystatechange', this.loadHandler);
-      
+
       // The actual handler...
       this.init();
     }
