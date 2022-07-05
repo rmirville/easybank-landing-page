@@ -1,0 +1,7 @@
+@mixin animx-menu-start() {
+	left: -100vw;
+}
+
+@mixin animx-menu-end() {
+	left: 0;
+}

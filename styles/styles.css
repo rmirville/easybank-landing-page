@@ -193,10 +193,10 @@ a:hover {
 }
 
 .header-narrow__modal {
+  left: -100vw;
   display: none;
   position: absolute;
-  top: -1000px;
-  left: 0;
+  top: 64px;
   box-sizing: border-box;
   width: 100vw;
   min-height: 100vh;
@@ -205,47 +205,47 @@ a:hover {
 }
 
 .jsHeaderNarrow__modal--active {
+  left: 0;
   display: block;
-  top: 64px;
-  animation: 600ms ease-in 0s 1 normal menu_appear;
-  -webkit-animation: 600ms ease-in 0s 1 normal menu_appear;
+  animation: 600ms ease-in-out 0s 1 normal menu_enter;
+  -webkit-animation: 600ms ease-in-out 0s 1 normal menu_enter;
 }
 
 .jsHeaderNarrow__modal--inactive {
-  animation: 600ms ease-out 0s 1 normal menu_appear;
-  -webkit-animation: 600ms ease-out 0s 1 normal menu_appear;
+  animation: 600ms ease-out 0s 1 normal menu_exit;
+  -webkit-animation: 600ms ease-out 0s 1 normal menu_exit;
 }
 
-@-webkit-keyframes menu_appear {
+@-webkit-keyframes menu_enter {
   from {
-    top: -1000px;
+    left: -100vw;
   }
   to {
-    top: 64px;
+    left: 0;
   }
 }
-@keyframes menu_appear {
+@keyframes menu_enter {
   from {
-    top: -1000px;
+    left: -100vw;
   }
   to {
-    top: 64px;
+    left: 0;
   }
 }
-@-webkit-keyframes menu_disappear {
+@-webkit-keyframes menu_exit {
   from {
-    top: 64px;
+    left: 0;
   }
   to {
-    top: -1000px;
+    left: -100vw;
   }
 }
-@keyframes menu_disappear {
+@keyframes menu_exit {
   from {
-    top: 64px;
+    left: 0;
   }
   to {
-    top: -1000px;
+    left: -100vw;
   }
 }
 .header__overlay {

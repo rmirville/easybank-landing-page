@@ -13,10 +13,10 @@
 }
 
 .header-narrow__modal {
+	@include animx-menu-start;
 	display: none;
 	position: absolute;
-	top: -1000px;
-	left: 0;
+	top: 64px;
 	box-sizing: border-box;
 	width: 100vw;
 	min-height: 100vh;
@@ -25,21 +25,21 @@
 }
 
 .jsHeaderNarrow__modal--active {
+	@include animx-menu-end;
 	display: block;
-	top: 64px;
-	animation: 600ms ease-in 0s 1 normal menu_appear;
-	-webkit-animation: 600ms ease-in 0s 1 normal menu_appear;
+	animation: 600ms ease-in-out 0s 1 normal menu_enter;
+	-webkit-animation: 600ms ease-in-out 0s 1 normal menu_enter;
 }
 
 .jsHeaderNarrow__modal--inactive {
-	animation: 600ms ease-out 0s 1 normal menu_appear;
-	-webkit-animation: 600ms ease-out 0s 1 normal menu_appear;
+	animation: 600ms ease-out 0s 1 normal menu_exit;
+	-webkit-animation: 600ms ease-out 0s 1 normal menu_exit;
 }
 
-@-webkit-keyframes menu_appear { from { top: -1000px } to { top: 64px; }  }
-@keyframes menu_appear { from { top: -1000px } to { top: 64px; }  }
-@-webkit-keyframes menu_disappear { from { top: 64px; } to { top: -1000px }  }
-@keyframes menu_disappear { from { top: 64px; } to { top: -1000px }  }
+@-webkit-keyframes menu_enter { from { @include animx-menu-start; } to { @include animx-menu-end; }  }
+@keyframes menu_enter { from { @include animx-menu-start; } to { @include animx-menu-end; }  }
+@-webkit-keyframes menu_exit { from { @include animx-menu-end; } to { @include animx-menu-start; }  }
+@keyframes menu_exit { from { @include animx-menu-end; } to { @include animx-menu-start; }  }
 
 .header__overlay {
 	display: none;
