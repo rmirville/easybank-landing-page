@@ -14,7 +14,7 @@
 
 .header-narrow__modal {
 	@include animx-menu-start;
-	display: none;
+	// opacity: 0;
 	position: absolute;
 	top: 64px;
 	box-sizing: border-box;
@@ -26,14 +26,14 @@
 
 .jsHeaderNarrow__modal--active {
 	@include animx-menu-end;
-	display: block;
 	animation: 600ms ease-in-out 0s 1 normal menu_enter;
 	-webkit-animation: 600ms ease-in-out 0s 1 normal menu_enter;
 }
 
 .jsHeaderNarrow__modal--inactive {
-	animation: 600ms ease-out 0s 1 normal menu_exit;
-	-webkit-animation: 600ms ease-out 0s 1 normal menu_exit;
+	@include animx-menu-start;
+	animation: 600ms ease-in-out 0s 1 normal menu_exit;
+	-webkit-animation: 600ms ease-in-out 0s 1 normal menu_exit;
 }
 
 @-webkit-keyframes menu_enter { from { @include animx-menu-start; } to { @include animx-menu-end; }  }
@@ -42,23 +42,41 @@
 @keyframes menu_exit { from { @include animx-menu-end; } to { @include animx-menu-start; }  }
 
 .header__overlay {
-	display: none;
+	@include animx-overlay-start;
+	display: block;
 	position: relative;
-	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.5) 313px, transparent calc(100vh - 80px));
 }
 
 .jsHeader__overlay--active {
-	display: block;
-	background: linear-gradient(rgba(0, 0, 0, 0.5) 313px, transparent calc(100vh - 80px));
-  -webkit-animation: 200ms ease-in 0s 1 normal overlay_appear;
-  animation: 200ms ease-in 0s 1 normal overlay_appear;
+	@include animx-overlay-end;
+  -webkit-animation: 600ms ease-in-out 0s 1 normal overlay_appear,
+		200ms ease-in 0s 1 normal overlay_enter;
+  animation: 600ms ease-in-out 0s 1 normal overlay_appear,
+		200ms ease-in 0s 1 normal overlay_enter;
 }
 
-@-webkit-keyframes overlay_appear { from { opacity: 0; } to { opacity: 1; }  }
-@keyframes overlay_appear { from { opacity: 0; } to { opacity: 1; }  }
+.jsHeader__overlay--inactive {
+	@include animx-overlay-start;
+  -webkit-animation: 1000ms ease-in-out 0s 1 normal overlay_disappear,
+		1000ms ease-in-out 0s 1 normal overlay_exit;
+  animation: 1000ms ease-in-out 0s 1 normal overlay_disappear,
+		1000ms ease-in-out 0s 1 normal overlay_exit;
+}
+
+@-webkit-keyframes overlay_appear { from { opacity: 0; } to { opacity: 1; } }
+@keyframes overlay_appear { from { opacity: 0; } to { opacity: 1; } }
+@-webkit-keyframes overlay_disappear { from { opacity: 1; } to { opacity: 0; } }
+@keyframes overlay_disappear { from { opacity: 1; } to { opacity: 0; } }
+
+@-webkit-keyframes overlay_enter { from { @include animx-overlay-start; } to { @include animx-overlay-end; } }
+@keyframes overlay_enter { from { @include animx-overlay-start; } to { @include animx-overlay-end; }  }
+
+@-webkit-keyframes overlay_exit { from { @include animx-overlay-end; } to { @include animx-overlay-start; } }
+@keyframes overlay_exit { from { @include animx-overlay-end; } to { @include animx-overlay-start; }  }
 
 .header-narrow__links {
 	 margin: 0;

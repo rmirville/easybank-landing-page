@@ -5,3 +5,11 @@
 @mixin animx-menu-end() {
 	left: 0;
 }
+
+@mixin animx-overlay-start() {
+	top: -100vw;
+}
+
+@mixin animx-overlay-end() {
+	top: 0;
+}
