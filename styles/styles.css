@@ -193,7 +193,6 @@ a:hover {
 }
 
 .header-narrow__modal {
-  left: -100vw;
   position: absolute;
   top: 64px;
   box-sizing: border-box;
@@ -205,11 +204,19 @@ a:hover {
 
 .jsHeaderNarrow__modal--active {
   left: 0;
+}
+
+.jsHeaderNarrow__modal--active-animating {
+  left: 0;
   animation: 600ms ease-in-out 0s 1 normal menu_enter;
   -webkit-animation: 600ms ease-in-out 0s 1 normal menu_enter;
 }
 
 .jsHeaderNarrow__modal--inactive {
+  left: -100vw;
+}
+
+.jsHeaderNarrow__modal--inactive-animating {
   left: -100vw;
   animation: 600ms ease-in-out 0s 1 normal menu_exit;
   -webkit-animation: 600ms ease-in-out 0s 1 normal menu_exit;
@@ -248,7 +255,6 @@ a:hover {
   }
 }
 .header__overlay {
-  top: -100vw;
   display: block;
   position: relative;
   left: 0;
@@ -259,11 +265,19 @@ a:hover {
 
 .jsHeader__overlay--active {
   top: 0;
+}
+
+.jsHeader__overlay--active-animating {
+  top: 0;
   -webkit-animation: 600ms ease-in-out 0s 1 normal overlay_appear, 200ms ease-in 0s 1 normal overlay_enter;
   animation: 600ms ease-in-out 0s 1 normal overlay_appear, 200ms ease-in 0s 1 normal overlay_enter;
 }
 
 .jsHeader__overlay--inactive {
+  top: -100vw;
+}
+
+.jsHeader__overlay--inactive-animating {
   top: -100vw;
   -webkit-animation: 1000ms ease-in-out 0s 1 normal overlay_disappear, 1000ms ease-in-out 0s 1 normal overlay_exit;
   animation: 1000ms ease-in-out 0s 1 normal overlay_disappear, 1000ms ease-in-out 0s 1 normal overlay_exit;

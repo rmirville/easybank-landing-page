@@ -1,18 +1,23 @@
 const EasyBank = {
-	elem: function(selector, active, inactive) {
+	css: {
+		class: {
+			animx: '-animating',
+		}
+	},
+	elem: function(selector, active, inactive, duration = 0) {
 		const el = document.querySelector(selector);
-		const activate = () => {
+		const setActiveState = (start, end) => {
 			if (el) {
-				el.classList.remove(inactive);
-				el.classList.add(active);
+				el.classList.add(end + this.css.class.animx);
+				el.classList.remove(start);
+				el.classList.add(end);
+				setTimeout(() => {
+					el.classList.remove(end + this.css.class.animx);
+				}, duration);
 			}
-		};
-		const deactivate = () => {
-			if (el) {
-				el.classList.remove(active);
-				el.classList.add(inactive);
-			}
-		};
+		}
+		const activate = () => setActiveState(inactive, active);
+		const deactivate = () => setActiveState(active, inactive);
 		return {
 			el,
 			activate,
@@ -24,10 +29,10 @@ const EasyBank = {
 			active: 'header__nav-icon-ctx--active',
 			inactive: 'header__nav-icon-ctx--inactive',
 		};
-		const navOpen = this.elem('.jsHeader__navOpen', navIcon.active, navIcon.inactive);
-		const navClose = this.elem('.jsHeader__navClose', navIcon.active, navIcon.inactive);
-		const menu = this.elem('.jsHeaderNarrow__modal', 'jsHeaderNarrow__modal--active', 'jsHeaderNarrow__modal--inactive');
-		const overlay = this.elem('.jsHeader__overlay', 'jsHeader__overlay--active', 'jsHeader__overlay--inactive');
+		const navOpen = this.elem('.jsHeader__navOpen', navIcon.active, navIcon.inactive );
+		const navClose = this.elem('.jsHeader__navClose', navIcon.active, navIcon.inactive );
+		const menu = this.elem('.jsHeaderNarrow__modal', 'jsHeaderNarrow__modal--active', 'jsHeaderNarrow__modal--inactive', 600 );
+		const overlay = this.elem('.jsHeader__overlay', 'jsHeader__overlay--active', 'jsHeader__overlay--inactive', 1000 );
     navOpen.el.addEventListener('click', () => {
       navOpen.deactivate();
       navClose.activate();
@@ -50,10 +55,10 @@ const EasyBank = {
 
       // remove the listener, to make sure it isn't fired in the future
       document.detachEvent('onreadystatechange', this.loadHandler);
-
-      // The actual handler...
-      this.init();
     }
+
+		// The actual handler...
+		this.init();
   }
 };
 

@@ -13,8 +13,6 @@
 }
 
 .header-narrow__modal {
-	@include animx-menu-start;
-	// opacity: 0;
 	position: absolute;
 	top: 64px;
 	box-sizing: border-box;
@@ -26,11 +24,19 @@
 
 .jsHeaderNarrow__modal--active {
 	@include animx-menu-end;
+}
+
+.jsHeaderNarrow__modal--active-animating {
+	@include animx-menu-end;
 	animation: 600ms ease-in-out 0s 1 normal menu_enter;
 	-webkit-animation: 600ms ease-in-out 0s 1 normal menu_enter;
 }
 
 .jsHeaderNarrow__modal--inactive {
+	@include animx-menu-start;
+}
+
+.jsHeaderNarrow__modal--inactive-animating {
 	@include animx-menu-start;
 	animation: 600ms ease-in-out 0s 1 normal menu_exit;
 	-webkit-animation: 600ms ease-in-out 0s 1 normal menu_exit;
@@ -42,7 +48,6 @@
 @keyframes menu_exit { from { @include animx-menu-end; } to { @include animx-menu-start; }  }
 
 .header__overlay {
-	@include animx-overlay-start;
 	display: block;
 	position: relative;
 	left: 0;
@@ -53,6 +58,10 @@
 
 .jsHeader__overlay--active {
 	@include animx-overlay-end;
+}
+
+.jsHeader__overlay--active-animating {
+	@include animx-overlay-end;
   -webkit-animation: 600ms ease-in-out 0s 1 normal overlay_appear,
 		200ms ease-in 0s 1 normal overlay_enter;
   animation: 600ms ease-in-out 0s 1 normal overlay_appear,
@@ -60,6 +69,10 @@
 }
 
 .jsHeader__overlay--inactive {
+	@include animx-overlay-start;
+}
+
+.jsHeader__overlay--inactive-animating {
 	@include animx-overlay-start;
   -webkit-animation: 1000ms ease-in-out 0s 1 normal overlay_disappear,
 		1000ms ease-in-out 0s 1 normal overlay_exit;
