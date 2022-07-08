@@ -1,4 +1,4 @@
-const EasyBank = {
+const AppMenu = {
 	css: {
 		class: {
 			animx: '-animating',
@@ -32,20 +32,15 @@ const EasyBank = {
 		const navOpen = this.elem('.jsHeader__navOpen', navIcon.active, navIcon.inactive );
 		const navClose = this.elem('.jsHeader__navClose', navIcon.active, navIcon.inactive );
 		const menu = this.elem('.jsHeaderNarrow__modal', 'jsHeaderNarrow__modal--active', 'jsHeaderNarrow__modal--inactive', 600 );
-		const overlay = this.elem('.jsHeader__overlay', 'jsHeader__overlay--active', 'jsHeader__overlay--inactive', 1000 );
     navOpen.el.addEventListener('click', () => {
       navOpen.deactivate();
       navClose.activate();
-
-			overlay.activate();
       menu.activate();
     });
     navClose.el.addEventListener('click', () => {
       navClose.deactivate();
       navOpen.activate();
-
       menu.deactivate();
-			overlay.deactivate();
     });
   },
 
@@ -65,19 +60,19 @@ const EasyBank = {
 // for IE <= 8
 if (document.hasOwnProperty('attachEvent')) {
   if (document.readyState === 'loading') {
-    document.attachEvent('onreadystatechange', EasyBank.loadHandler);
+    document.attachEvent('onreadystatechange', AppMenu.loadHandler);
   }
   else {
-    EasyBank.init();
+    AppMenu.init();
   }
 }
 
 // for modern browsers
 else {
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', EasyBank.init);
+    document.addEventListener('DOMContentLoaded', AppMenu.init);
   }
   else {  // `DOMContentLoaded` already fired
-    EasyBank.init();
+    AppMenu.init();
   }
 }

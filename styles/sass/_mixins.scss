@@ -1,13 +1,15 @@
 @mixin animx-menu-start() {
-	left: -100vw;
+	top: calc(-100vh - 330px);
+	// left: calc(-100vw - 330px);
 }
 
 @mixin animx-menu-end() {
-	left: 0;
+	top: 64px;
+	// left: 0;
 }
 
 @mixin animx-overlay-start() {
-	top: -100vw;
+	top: -100vh;
 }
 
 @mixin animx-overlay-end() {

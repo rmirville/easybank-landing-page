@@ -47,56 +47,13 @@
 @-webkit-keyframes menu_exit { from { @include animx-menu-end; } to { @include animx-menu-start; }  }
 @keyframes menu_exit { from { @include animx-menu-end; } to { @include animx-menu-start; }  }
 
-.header__overlay {
-	display: block;
-	position: relative;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.5) 313px, transparent calc(100vh - 80px));
-}
-
-.jsHeader__overlay--active {
-	@include animx-overlay-end;
-}
-
-.jsHeader__overlay--active-animating {
-	@include animx-overlay-end;
-  -webkit-animation: 600ms ease-in-out 0s 1 normal overlay_appear,
-		200ms ease-in 0s 1 normal overlay_enter;
-  animation: 600ms ease-in-out 0s 1 normal overlay_appear,
-		200ms ease-in 0s 1 normal overlay_enter;
-}
-
-.jsHeader__overlay--inactive {
-	@include animx-overlay-start;
-}
-
-.jsHeader__overlay--inactive-animating {
-	@include animx-overlay-start;
-  -webkit-animation: 1000ms ease-in-out 0s 1 normal overlay_disappear,
-		1000ms ease-in-out 0s 1 normal overlay_exit;
-  animation: 1000ms ease-in-out 0s 1 normal overlay_disappear,
-		1000ms ease-in-out 0s 1 normal overlay_exit;
-}
-
-@-webkit-keyframes overlay_appear { from { opacity: 0; } to { opacity: 1; } }
-@keyframes overlay_appear { from { opacity: 0; } to { opacity: 1; } }
-@-webkit-keyframes overlay_disappear { from { opacity: 1; } to { opacity: 0; } }
-@keyframes overlay_disappear { from { opacity: 1; } to { opacity: 0; } }
-
-@-webkit-keyframes overlay_enter { from { @include animx-overlay-start; } to { @include animx-overlay-end; } }
-@keyframes overlay_enter { from { @include animx-overlay-start; } to { @include animx-overlay-end; }  }
-
-@-webkit-keyframes overlay_exit { from { @include animx-overlay-end; } to { @include animx-overlay-start; } }
-@keyframes overlay_exit { from { @include animx-overlay-end; } to { @include animx-overlay-start; }  }
-
 .header-narrow__links {
-	 margin: 0;
-	 border-radius: 5px;
-	 background-color: $color-light-bg;
-	 padding: 20px 0;
-	 text-align: center;
+	margin: 0;
+	border-radius: 5px;
+	background-color: $color-light-bg;
+	padding: 20px 0;
+	text-align: center;
+	box-shadow: 0 0px 200px 130px rgba(0, 0, 0, 0.5);
 }
 
 
